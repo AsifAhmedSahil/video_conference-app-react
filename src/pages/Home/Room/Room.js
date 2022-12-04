@@ -10,7 +10,6 @@ const Room = () => {
             appID,
             serverSecret,
             roomId,
-           
             Date.now().toString(), "sahil"
             );
 
@@ -24,8 +23,8 @@ const Room = () => {
 
     }
   return (
-    <div className='room-page'>
-        <div ref={meeting}>
+    <div className='room-page '>
+        <div ref={meeting} className="h-screen">
 
         </div>
 
