@@ -16,6 +16,17 @@ const Room = () => {
             const zp = ZegoUIKitPrebuilt.create(kitToken);
             zp.joinRoom({
                 container: element,
+                maxUsers: 50,
+                sharedLinks: [{
+                    url: window.location.origin + window.location.pathname + '?roomID=' + roomId,
+                }],
+                videoResolutionList: [
+                    ZegoUIKitPrebuilt.VideoResolution_360P,
+                    ZegoUIKitPrebuilt.VideoResolution_180P,
+                    ZegoUIKitPrebuilt.VideoResolution_480P,
+                    ZegoUIKitPrebuilt.VideoResolution_720P,
+                  ],
+               videoResolutionDefault: ZegoUIKitPrebuilt.VideoResolution_360P, 
                 scenario:{
                     mode:ZegoUIKitPrebuilt.VideoConference,
                 }
